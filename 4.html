@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <script src="https://unpkg.com/rough-viz@1.0.4"></script>
+  <style>
+	    .wrapper {
+	      display: flex;
+	      flex: wrap;
+        order: row;
+	    }
+  </style>
+</head>
+
+<body>
+  <br><br>
+  <div class="wrapper">
+    <div id="vis0"></div>
+    <div id="vis1"></div>
+    </div>
+  <script> 
+    
+new roughViz.Scatter(
+  {
+    element: '#vis0',
+    data: 'https://gist.githubusercontent.com/fengcong111/db2d120e8de893cef4d164c3b9e2eb76/raw/a0db7825295b2f38704f5a069fc55d82336aeab5/data.csv',
+    title: '控制-均衡-自主',
+    x: 'sepal_width',
+    y: 'petal_length',
+    colorVar: 'species',
+    highlightLabel: 'species',
+    fillWeight: 4,
+    radius: 12,
+    colors: ['pink', 'coral', 'skyblue'],
+    stroke: 'black',
+    strokeWidth: 0.4,
+    roughness: 1,
+    width: 400,
+    height: 450,
+    font: 0,
+    xLabel: 'x',
+    yLabel: 'y',
+    curbZero: false,
+})
+
+  </script>
+</body>
